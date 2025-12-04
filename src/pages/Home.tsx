@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Users, Home as HomeIcon, Wifi, Coffee, Dumbbell, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hostel-hero.jpg";
+import heroImage from "@/assets/hostel-hero.jpeg";
 
 const Home = () => {
   const highlights = [

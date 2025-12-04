@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.jpeg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,9 +37,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-hero rounded-lg flex items-center justify-center font-bold text-lg md:text-xl text-primary-foreground transition-transform duration-300 group-hover:scale-110">
-              H5
+              <img src={logo}></img>
             </div>
-            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-xl md:text-2xl font-bold text-white bg-clip-text ">
               Hostel 5
             </span>
           </Link>
