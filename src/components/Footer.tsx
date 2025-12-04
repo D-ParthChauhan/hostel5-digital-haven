@@ -1,20 +1,23 @@
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="glass border-t-0 relative overflow-hidden">
+      <div className="absolute inset-0 mesh-gradient opacity-30 pointer-events-none" />
+      
+      <div className="container mx-auto px-4 py-12 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center font-bold text-lg text-primary-foreground">
-                H5
+              <div className="w-10 h-10 rounded-xl overflow-hidden glow">
+                <img src={logo} alt="Hostel 5" className="w-full h-full object-cover" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-gradient">
                 Hostel 5
               </span>
             </div>
@@ -27,7 +30,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {["About", "Facilities", "Team", "Gallery", "Events"].map((link) => (
+              {["About", "Facilities", "Team", "Gallery", "Events", "Community"].map((link) => (
                 <li key={link}>
                   <Link
                     to={`/${link.toLowerCase()}`}
@@ -65,19 +68,19 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300 glow-hover"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300 glow-hover"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300 glow-hover"
               >
                 <Twitter className="h-5 w-5" />
               </a>
@@ -85,7 +88,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center text-muted-foreground text-sm">
+        <div className="border-t border-border/50 mt-8 pt-8 text-center text-muted-foreground text-sm">
           <p>&copy; {currentYear} Hostel 5. All rights reserved.</p>
         </div>
       </div>
